@@ -2,6 +2,7 @@ import 'package:cartaty/Controller/dashboard_controller.dart';
 import 'package:cartaty/Views/HomePage.dart';
 import 'package:cartaty/Views/Profile.dart';
 import 'package:cartaty/Views/Settings.dart';
+import 'package:cartaty/Views/wallet.dart';
 import 'package:cartaty/colors/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -52,14 +53,7 @@ class DashboardView extends StatelessWidget {
           buildBottomNavigationMenu(context, dashboardController),
       body: Obx(() => IndexedStack(
             index: dashboardController.tabIndex.value,
-            children: [
-              HomePage(),
-              Profile(),
-              const Center(
-                child: Text("Hi"),
-              ),
-              Settings()
-            ],
+            children: [HomePage(), Profile(), Wallet(), Settings()],
           )),
     ));
   }

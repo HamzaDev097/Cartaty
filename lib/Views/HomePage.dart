@@ -1,4 +1,5 @@
 import 'package:cartaty/Controller/HomePageController.dart';
+import 'package:cartaty/Views/balance.dart';
 import 'package:cartaty/Views/drawer.dart';
 import 'package:cartaty/colors/theme.dart';
 import 'package:flutter/material.dart';
@@ -97,48 +98,7 @@ class HomePageState extends State<HomePage> {
                 ],
               ),
               const SizedBox(height: 20),
-              Container(
-                width: 200,
-                height: 100,
-                margin: const EdgeInsets.symmetric(horizontal: 22.0),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(theme.getColor("itemsColor")),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        textDirection: TextDirection.rtl,
-                        children: [
-                          SizedBox(height: 12),
-                          Text(
-                            'الرصيد الحالي',
-                            style: TextStyle(
-                                color: Color(theme.getColor("secendTextColor")),
-                                fontSize: 20.0),
-                          ),
-                          Text(
-                            'IQD 100.000',
-                            style: TextStyle(
-                                color: Color(theme.getColor("mainTextColor")),
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      color: Color(theme.getColor("mainTextColor")),
-                      size: 33,
-                    ),
-                  ],
-                ),
-              ),
+              Balance("100.000"),
               const SizedBox(height: 20),
               CarouselSlider(
                   items: imagesList

@@ -31,7 +31,7 @@ class Themes extends GetxController {
   };
 
   getColor(key) {
-    theme.writeIfNull("Theme", 1);
+    theme.writeIfNull("Theme", 2);
 
     if (theme.read('Theme') == 1) {
       return int.parse(darkTheme[key].toString());
