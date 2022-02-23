@@ -1,4 +1,4 @@
-import 'package:cartaty/SplashScreen.dart';
+import 'package:cartaty/main.dart';
 import 'package:cartaty/colors/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
