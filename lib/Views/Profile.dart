@@ -20,9 +20,9 @@ class Profile extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: Color(theme.getColor("itemsColor")),
-              borderRadius: new BorderRadius.vertical(
-                  bottom: new Radius.elliptical(
-                      MediaQuery.of(context).size.width, 200.0)),
+              borderRadius: BorderRadius.vertical(
+                  bottom: Radius.elliptical(
+                      MediaQuery.of(context).size.width, 120.0)),
             ),
             child: Column(children: [
               const SizedBox(height: 10),

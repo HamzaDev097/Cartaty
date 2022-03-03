@@ -40,6 +40,8 @@ dependencies:
   carousel_slider: ^4.0.0
   flutter_svg: ^1.0.3
   get_storage: ^2.0.3
+  custom_navigation_bar: ^0.8.2
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
@@ -91,6 +93,12 @@ flutter:
     - assets/icons/Setting.svg
     - assets/icons/Wallet_Red.svg
     - assets/icons/Wallet.svg
+    - assets/icons/Dark.svg
+    - assets/icons/FingerPrint.svg
+    - assets/icons/Language.svg
+    - assets/icons/Lock.svg
+    - assets/icons/Notification.svg
+    - assets/icons/Wifi.svg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

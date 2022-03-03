@@ -4,6 +4,7 @@ import 'package:cartaty/Views/Profile.dart';
 import 'package:cartaty/Views/Settings.dart';
 import 'package:cartaty/Views/wallet.dart';
 import 'package:cartaty/colors/theme.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,20 +17,20 @@ class DashboardView extends StatelessWidget {
       fontWeight: FontWeight.w500,
       fontSize: 12);
 
-  final TextStyle selectedLabelStyle =
-      TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 12);
+  final TextStyle selectedLabelStyle = const TextStyle(
+      color: Colors.white, fontWeight: FontWeight.w500, fontSize: 12);
 
   buildBottomNavigationMenu(context, landingPageController) {
     return Obx(() => MediaQuery(
         data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
         child: SizedBox(
           height: 54,
-          child: BottomNavigationBar(
+          child: CustomNavigationBar(
               onTap: landingPageController.changeTabIndex,
               currentIndex: landingPageController.tabIndex.value,
-              backgroundColor: const Color.fromRGBO(1, 4, 24, 1),
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
+              iconSize: 30.0,
+              backgroundColor: Colors.white,
+              strokeColor: Colors.white,
               items: [
                 BottomNavigationBarItems(
                     "assets/icons/Home_notFULL.svg", "assets/icons/Home.svg"),
@@ -59,14 +60,11 @@ class DashboardView extends StatelessWidget {
   }
 
   BottomNavigationBarItems(icon, activeIcon) {
-    return BottomNavigationBarItem(
-      backgroundColor: Color(theme.getColor("backgrouund")),
-      label: '',
-      icon: SvgPicture.asset("$icon"),
-      activeIcon: SvgPicture.asset(
-        "$activeIcon",
-        color: const Color(0xFFAA0100),
-      ),
-    );
+    return CustomNavigationBarItem(
+        icon: SvgPicture.asset("$icon"),
+        selectedIcon: SvgPicture.asset(
+          "$activeIcon",
+          color: const Color(0xFFAA0100),
+        ));
   }
 }
